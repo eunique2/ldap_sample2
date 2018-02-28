@@ -15,12 +15,12 @@ client.on('connect', function() {
 
   var searchOptions = {
     scope: "sub",
-    filter: '(sAMAccountName=d4001367)'
+    filter: '(sn=임미화)'
   };
   client.search(baseDN, searchOptions, function(err, res) {
     res.on('searchEntry', function(entry) {
       console.log('entry: ' + JSON.stringify(entry.object.dn));
-      client.bind(entry.object.dn, 'P@4001367!!', function(err) {
+      client.bind(entry.object.dn, 'P@4000067!!', function(err) {
         if (err == null) {
           console.log("it's true");
         } else {
